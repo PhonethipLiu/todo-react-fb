@@ -25,21 +25,21 @@ class App extends React.Component {
     });
   }
 
-  //  lifecycle hook
+  //lifecycle hook
   componentWillUpdate(nextProps, nextState){
     //automatically passes in nextprops and nextState
     console.log("something changed");
     console.log("nextProps:", nextProps, "nextState", nextState);
     //example use: set props in local storage
   }
- //method adds new item
+ //method adds new item passed in the component
   handleAddItem(newItem) {
     this.setState({
       list: this.state.list.concat([newItem])
     });
   }
 
-  //method removes item
+  //method removes item passed in the component
   handleRemoveItem(index) {
     //the react way: Make a copy of state, modify, and then set new state
     var newList = this.state.list;
